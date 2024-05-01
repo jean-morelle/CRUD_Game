@@ -1,0 +1,12 @@
+﻿@inject NavigationManager Navigation
+@rendermode InteractiveServer
+
+<button @onclick="NavigateToAnotherPage" class="btn btn-outline-primary">Create Game</button>
+
+
+@code {
+    void NavigateToAnotherPage()
+    {
+        Navigation.NavigateTo("/EditGame");
+    }
+}

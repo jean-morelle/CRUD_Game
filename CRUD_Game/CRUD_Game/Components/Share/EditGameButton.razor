@@ -1,0 +1,15 @@
+﻿@inject NavigationManager Navigation
+@rendermode InteractiveServer
+
+<button @onclick="EditGame" class="btn btn-outline-primary">Edit Game</button>
+
+
+@code {
+    [Parameter]
+    public int id { get; set; }
+
+    void EditGame()
+    {
+        Navigation.NavigateTo($"/EditGame/{id}");
+    }
+}
